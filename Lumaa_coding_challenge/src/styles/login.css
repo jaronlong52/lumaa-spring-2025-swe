@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    color: #495057;
+    font-weight: 500;
+    margin-right: 10px;
+    flex: 1;
+    text-align: left;
+    font-size: large;
+}
+
+.login-container input {
+    padding: 12px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #495057;
+    flex: 2;
+}
+
+.login-container input:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.login-container button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    font-size: large;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.login-container button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: -15px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.tab.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    font-size: large;
+}
+
+.tab.inactive {
+    color: #6c757d;
+    font-size: large;
+}
