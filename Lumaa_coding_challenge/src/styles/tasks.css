@@ -1,0 +1,109 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.tasks-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+}
+
+.task-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    width: 400px;
+}
+
+.task-form input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #495057;
+    margin-right: 10px;
+}
+
+.task-form input:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.task-form button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    font-size: large;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-form button:hover {
+    background-color: #0056b3;
+}
+
+.task-form button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #ced4da;
+}
+
+li label {
+    color: black;
+}
+
+li div {
+    display: flex;
+}
+
+li button {
+    margin-left: 10px;
+    padding: 6px 15px;
+    background-color: #6c757d;
+    color: #ffffff;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+li button:hover {
+    background-color: #5a6268;
+}
+
+li button {
+    background-color: #007bff;
+}
+
+li button:hover {
+    background-color: #0056b3;
+}
