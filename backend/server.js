@@ -15,7 +15,7 @@ const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
     database: 'task-manager',
-    password: 'Abletooth65.',
+    password: '',
     port: 5432,
 });
 
