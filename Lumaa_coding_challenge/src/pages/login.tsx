@@ -1,18 +1,36 @@
 import React, { useState } from 'react';
 import './../styles/Login.css';
 import Header from '../components/header';
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios';
 
 export default function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [isLogin, setIsLogin] = useState(true);
+    const [error, setError] = useState('');
+    
+    const navigate = useNavigate();
 
-    const handleSubmit = (event: React.FormEvent) => {
+    const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
-        // Handle login or sign-up logic here
-        console.log('Username:', username);
-        console.log('Password:', password);
-        console.log(isLogin ? 'Logging in...' : 'Signing up...');
+        setError('');
+        try {
+            if (isLogin) {
+                // Handle login
+                const response = await axios.post('http://localhost:3001/login', { username, password });
+                console.log(response.data);
+                navigate('/tasks');
+            } else {
+                // Handle sign-up
+                const response = await axios.post('http://localhost:3001/users', { username, password });
+                console.log(response.data);
+                navigate('/tasks');
+            }
+        } catch (err) {
+            console.error(err);
+            setError('Failed to login or sign up');
+        }
     };
 
     return (
